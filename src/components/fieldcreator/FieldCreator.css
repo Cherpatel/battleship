@@ -1,0 +1,236 @@
+﻿.field-creator {
+    display: grid;
+    grid-template-rows: 870px;
+    grid-template-columns: 270px 870px;
+    width: 1140px;
+    height: 870px;
+
+    border-radius: 30px;
+    box-shadow: 0 0 10px gray;
+
+    overflow: hidden;
+}
+
+.field-creator > .options {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    padding: 30px 12px;
+
+    background-color: rgb(73, 73, 188);
+}
+
+.field-creator > .options > .title {
+    display: inline-block;
+    width: 100%;
+    margin-bottom: 30px;
+
+    font-size: 22px;
+    text-align: center;
+    text-shadow: 0 0 1.5px black;
+    color: #ced9f1;
+}
+
+.field-creator > .options > .b-ships {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 100%;
+    margin-bottom: 40px;
+}
+
+.field-creator > .options > .b-ships > .item {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    height: 50px;
+
+    cursor: pointer;
+}
+
+.field-creator > .options > .b-ships > .item.disabled {
+    filter: grayscale(0.6);
+
+    cursor: default;
+    pointer-events: none;
+}
+
+.field-creator > .options > .b-ships > .item > .b-preview {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    padding: 0 5px;
+
+    border-radius: 5px;
+    background-color: white;
+}
+
+.field-creator > .options > .b-ships > .item > .b-preview.selected {
+    box-shadow: 0 0 1px black;
+    background-color: #5b65ff;
+}
+
+.field-creator > .options > .b-ships > .item > .b-count {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    aspect-ratio: 1/1;
+
+    font-size: 26px;
+
+    border-radius: 7px;
+    background-color: white;
+
+    user-select: none;
+}
+
+.field-creator > .options > .b-rotate {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 50px;
+}
+
+.field-creator > .options > .b-rotate > .b-preview {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 180px;
+    aspect-ratio: 1/1;
+    border: 1px solid black;
+    margin-bottom: 15px;
+
+    border-radius: 10px;
+    background-color: white;
+}
+
+.field-creator > .options > .b-rotate > .b-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 140px;
+    height: 40px;
+    border: 2px solid black;
+
+    font-size: 20px;
+    font-weight: 500;
+    text-transform: uppercase;
+
+    border-radius: 10px;
+
+    background-color: #b6ccff;
+
+    cursor: pointer;
+    user-select: none;
+}
+
+.field-creator > .options > .b-submit {
+    align-self: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 180px;
+    height: 60px;
+    border: 2px solid black;
+
+    font-size: 30px;
+    font-weight: bold;
+    text-transform: uppercase;
+
+    border-radius: 10px;
+
+    background-color: #b6ccff;
+
+    cursor: pointer;
+    user-select: none;
+}
+
+.field-creator > .options > .b-submit.disabled {
+    filter: grayscale(0.6);
+
+    pointer-events: none;
+}
+
+
+
+.field-creator > .field-wraper {
+    display: grid;
+    grid-template-rows: 70px 700px;
+    grid-template-columns: 70px 700px;
+    width: 100%;
+    height: 100%;
+    padding: 50px;
+
+    background-color: rgb(90, 90, 224);
+}
+
+.field-creator > .field-wraper > .top-numeration {
+    display: flex;
+}
+
+.field-creator > .field-wraper > .left-numeration {
+    display: flex;
+    flex-direction: column;
+}
+
+.field-creator > .field-wraper > .top-numeration > .value,
+.field-creator > .field-wraper > .left-numeration > .value {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 70px;
+    height: 70px;
+
+    font-size: 20px;
+    font-weight: 500;
+    text-transform: uppercase;
+
+    user-select: none;
+}
+
+.field-creator > .field-wraper > .field {
+    display: grid;
+    grid-template-rows: repeat(10, 70px);
+    grid-template-columns: repeat(10, 70px);
+    width: 100%;
+    height: 100%;
+    border: 2px solid black;
+
+    border-radius: 10px;
+    background-color: white;
+
+    overflow: hidden;
+}
+
+.field-creator > .field-wraper > .field > .square {
+    border: 1px solid black;
+}
+
+.field-creator > .field-wraper > .field > .square.red {
+    background-color: red;
+}
+
+.field-creator > .field-wraper > .field > .square.mouse-over {
+    background-color: #FF000080;
+}
+
+
+
+.ship {
+    display: flex;
+}
+
+.ship.rotate {
+    flex-direction: column;
+}
+
+.ship > .block {
+    width: 40px;
+    height: 40px;
+    border: 1px solid black;
+
+    background-color: red;
+}

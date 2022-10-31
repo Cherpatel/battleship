@@ -1,0 +1,160 @@
+﻿.game-wraper {
+    display: grid;
+    grid-template-rows: 700px;
+    grid-template-columns: 700px 100px 700px;
+    gap: 25px;
+    width: fit-content;
+    height: 700px;
+}
+
+.game-wraper > .turn-arrow {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.game-wraper > .turn-arrow > svg {
+    width: 80px;
+    height: 80px;
+
+    color: rgb(73, 73, 188);
+
+    transform: rotate(0deg);
+
+    transition: 0.4s;
+}
+
+.game-wraper > .turn-arrow.rotate > svg {
+    transform: rotate(180deg);
+}
+
+.game-wraper > .area {
+    position: relative;
+
+    display: grid;
+    grid-template-rows: 50px 500px 50px;
+    grid-template-columns: 50px 500px 50px;
+    padding: 50px;
+
+    border-radius: 30px;
+    box-shadow: 0 0 10px grey;
+    background-color: rgb(90, 90, 224);
+
+    overflow: hidden;
+}
+
+.game-wraper > .area.enemy-turn {
+    pointer-events: none;
+}
+
+.game-wraper > .area > .title {
+    position: absolute;
+    top: 10px;
+    left: 50%;
+
+    font-size: 40px;
+    text-shadow: 0 0 2px black;
+    color: #ced9f1;
+
+    transform: translateX(-50%);
+}
+
+.game-wraper > .area > .vert-numeration {
+    display: flex;
+}
+
+.game-wraper > .area > .side-numeration {
+    display: flex;
+    flex-direction: column;
+}
+
+.game-wraper > .area > .vert-numeration > .value,
+.game-wraper > .area > .side-numeration > .value {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+
+    font-size: 20px;
+    font-weight: 500;
+    text-transform: uppercase;
+
+    user-select: none;
+}
+
+.game-wraper > .area > .field {
+    display: grid;
+    grid-template-rows: repeat(10, 50px);
+    grid-template-columns: repeat(10, 50px);
+    width: 100%;
+    height: 100%;
+    border: 2px solid black;
+
+    border-radius: 10px;
+    background-color: white;
+
+    overflow: hidden;
+}
+
+.game-wraper > .area > .field > .square {
+    border: 1px solid black;
+}
+
+.game-wraper > .area > .field > .square > svg {
+    width: 100%;
+    height: 100%;
+}
+
+.game-wraper > .area > .result-wd {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 100;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    width: 100%;
+    height: 100%;
+
+    opacity: 0;
+    background-color: #FFFFFFD0;
+
+    transition: 0.7s;
+
+    pointer-events: none;
+}
+
+.game-wraper > .area > .result-wd.active {
+    opacity: 1;
+
+    pointer-events: all;
+}
+
+.game-wraper > .area > .result-wd > h2 {
+    font-size: 80px;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: black;
+}
+
+.game-wraper > .area > .result-wd > .restart-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 140px;
+    height: 60px;
+
+    font-size: 19px;
+    text-transform: uppercase;
+    color: white;
+
+    border-radius: 999px;
+    box-shadow: 0 0 2px gray;
+    background-color: rgb(129, 129, 229);
+
+    cursor: pointer;
+}
