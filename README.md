@@ -1,3 +1,7 @@
+# See preview here.
+
+## https://cherpatel.github.io/battleship/
+
 # How to use
 
 ## Create directory.
@@ -32,7 +36,7 @@ npm i
 npm start
 ```
 
-### To build app.
+### To build the app.
 
 ```
 npm run build
